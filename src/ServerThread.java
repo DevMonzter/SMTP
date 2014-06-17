@@ -83,7 +83,6 @@ public class ServerThread extends Thread {
 		} 
 		catch (IOException e) {			
 			System.err.println("I/O stream cannot be extracted");
-			//-- to add additional processing
 		}
 		while(true) {
 			try {
@@ -92,7 +91,6 @@ public class ServerThread extends Thread {
 			} 
 			catch (IOException e) {
 				System.err.println("Readline() failed");
-				//-- to add additional processing	
 			}
 			if(temp.equals("HELP")) {
 				pw.println(help());
@@ -106,7 +104,6 @@ public class ServerThread extends Thread {
 				} 
 				catch (IOException e) {
 					System.err.println("Clean up procedure failed");
-					//-- to add additional processing
 				}
 				this.TerminationFlag = true;
 				break;
