@@ -54,11 +54,6 @@ public class smtpd {
 				tempThread.start();
 			} 
 			catch (java.net.SocketTimeoutException e1) {
-				/*
-				for(ServerThread T : listOfThreads) {
-					//-- Try this approach to implement iteration, it should throw an exception
-				}
-				*/
 				for(int i=listOfThreads.size()-1; i>= 0; i--) {
 					ServerThread termThread = listOfThreads.get(i);
 					if(termThread.isTerminationFlag() == true) {
@@ -75,7 +70,6 @@ public class smtpd {
 			}
 			catch (IOException e3) {
 				System.err.println("Accept() method returned error: " + e3);
-				//-- to add additional processing
 			}			
 		}
 	}
